@@ -1,0 +1,26 @@
+---
+# tasks file for slack-deploy/
+
+#- name: create environment
+#  uri:
+#    url: "{{ deploybot_url }}/deploy-version/"
+#    method: POST
+#    user: "{{ deploybot_user }}"
+#    password: "{{ deploybot_password }}"
+#    body: '{"version": "{{ deploybot_password }}",
+#     "new_elb": "{{  ec2_new_elb }}",
+#     "cname_dns": "{{ route53_cname_dns}}",
+#     "hosted_zone_id": "{{ route53_hosted_zone_id }}",
+#     "current_elb": "{{ ec2_current_elb }}"}'
+#    force_basic_auth: yes
+#    HEADER_Content-Type: "application/json"
+#    status_code: 201
+#    body_format: json
+#  register: response_deploy
+#  when: ec2_new_elb is defined
+
+- include: slack_elb.yaml
+  when: ec2_load_balancer is defined and aws_resource_tags.VREnv ==  PROD
+
+- include: slack_no_elb.yaml
+  when: ec2_load_balancer is not defined and aws_resource_tags.VREnv == PROD

@@ -1,0 +1,8 @@
+- name: Send notification message via Slack (NO ELB)
+  local_action:
+    module: slack
+    token: "{{ slack_token }}"
+    msg: |
+      @channel: your {{ aws_asg.name }} environment are deployed
+    channel: "#{{ slack_channel_notify }}"
+    username: "{{ slack_username }}"
