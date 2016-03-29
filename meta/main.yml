@@ -1,9 +1,8 @@
 galaxy_info:
   author: Giancarlo Rubio
-  description:
+  categories:
+    - development
+  description: Slack integration for ansible deployments
   company: VivaReal
   license: license (BSD)
   min_ansible_version: 2.0.1
-  galaxy_tags: []
-
-dependencies: []
