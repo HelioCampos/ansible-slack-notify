@@ -1,7 +1,7 @@
 galaxy_info:
   author: Giancarlo Rubio
   categories:
-    - development
+  - development
   description: Slack integration for ansible deployments
   company: VivaReal
   license: license (BSD)
@@ -11,10 +11,10 @@ galaxy_info:
     - automation
     - slack
   platforms:
-    - name: CentOS
-      versions:
-      - all
-    - name: Ubuntu
-      versions:
-      - all
+  - name: CentOS
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
   dependencies: []
