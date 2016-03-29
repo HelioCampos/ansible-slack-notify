@@ -4,8 +4,8 @@
     token: "{{ slack_token }}"
     msg: |
       @channel: your environment are waiting for deploy.
-      You can open your new <http://{{ response_deploy.json.new_elb }}
-      to verify if everthing it's ok. Finally you can run
-      @deploy_bot: deploy {{ response_deploy.json.cname_dns }} {{ response_deploy.json.uuid }}
+      You can open your new <http://{{ ec2_load_balancer }}
+      to verify if everthing it's ok. #Finally you can run
+      #@deploy_bot: deploy {{ response_deploy.json.cname_dns }} {{ response_deploy.json.uuid }}
     channel: "#{{ slack_channel_notify }}"
     username: "{{ slack_username }}"
