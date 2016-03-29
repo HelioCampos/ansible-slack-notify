@@ -1,8 +1,0 @@
----
-# defaults file for slack-deploy/
-deploybot_url: http://deploy-button.vivareal.com:8000
-deploybot_user: eu
-deploybot_password: aaa
-
-slack_token: T02SSUGC1/B0HF7V7DH/vuPwThxrTwP1kb7oe7tBjFY6
-slack_username: deploy_bot
