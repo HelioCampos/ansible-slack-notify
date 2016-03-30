@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - VivaReal.slack-notify/
+    - ansible-slack-notify/
