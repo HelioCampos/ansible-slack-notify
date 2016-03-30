@@ -1,4 +1,4 @@
-Slack Notify
+Slack Notify ![](https://api.travis-ci.org/VivaReal/ansible-slack-notify.svg)
 =========
 
 Slack integration for ansible deployments
