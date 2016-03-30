@@ -1,4 +1,4 @@
-- name: Send notification message via Slack (NO ELB)
+- name: Send notification message via Slack (ASG)
   local_action:
     module: slack
     token: "{{ slack_token }}"

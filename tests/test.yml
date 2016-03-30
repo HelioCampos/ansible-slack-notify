@@ -1,5 +1,10 @@
 ---
 - hosts: localhost
-  remote_user: root
+  connection: local
+  vars:
+    aws_resource_tags: {'VREnv': 'PROD'}
+    slack_channel_notify: teste_slack
   roles:
-    - ansible-slack-notify/
+    - {role: ansible-slack-notify }
+    - {role: ansible-slack-notify, aws_asg: {name: 'asg-travis' }}
+    - {role: ansible-slack-notify, ec2_load_balancer: 'www.travis-ci.org'}

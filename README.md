@@ -19,11 +19,11 @@ Role Variables
 | slack_channel_notify| | | |A list of security groups to apply to the elb |
 | slack_token| | | | List of ports/protocols for this ELB to listen on (see [vars](defaults/main.yml)| 
 | slack_username| no | / | |The destination for the HTTP or HTTPS request. | 
-
+| aws_asg.name | no | | | ASG name|
 
 Ansible modules
 --------------
-[local_action](http://docs.ansible.com/ansible/slack_module.html)
+[slack](http://docs.ansible.com/ansible/slack_module.html)
 
 
 Output variables
