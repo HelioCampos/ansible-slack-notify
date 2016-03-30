@@ -48,7 +48,7 @@ Example Playbook
         slack_username: deploy_bot
         
       roles:
-        - { role: slack-notify }
+        - { role: VivaReal.slack-notify }
    
 
 License
