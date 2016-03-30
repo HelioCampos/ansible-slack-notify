@@ -1,4 +1,4 @@
 ---
 # defaults file for slack-deploy/
-slack_token: "{{ ansible_env['SLACK_DEPLOY_TOKEN'] }}
-slack_username: "{{ ansible_env['SLACK_DEPLOY_USER'] | default('deploy_bot') }}
+slack_token: "{{ ansible_env['SLACK_DEPLOY_TOKEN'] }}"
+slack_username: "{{ ansible_env['SLACK_DEPLOY_USER'] | default('deploy_bot') }}"
