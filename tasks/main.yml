@@ -1,7 +1,7 @@
 ---
 # tasks file for slack-deploy/
 - include: slack_elb.yaml
-  when: ec2_load_balancer is defined and aws_resource_tags.VREnv ==  'PROD'
+  when: aws_elb_dns_name is defined and aws_resource_tags.VREnv ==  'PROD'
 
 - include: slack_asg.yaml
-  when: ec2_load_balancer is not defined and aws_asg.name is defined and aws_resource_tags.VREnv == 'PROD'
+  when: aws_elb_dns_name is not defined and aws_asg.name is defined and aws_resource_tags.VREnv == 'PROD'

@@ -7,4 +7,4 @@
   roles:
     - {role: ansible-slack-notify }
     - {role: ansible-slack-notify, aws_asg: {name: 'asg-travis' }}
-    - {role: ansible-slack-notify, ec2_load_balancer: 'www.travis-ci.org'}
+    - {role: ansible-slack-notify, aws_elb_dns_name: 'www.travis-ci.org'}
